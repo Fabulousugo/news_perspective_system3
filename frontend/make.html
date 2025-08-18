@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Perspective Analysis - ONNX Optimized</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .speed-badge {
+            background: #ff6b35;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .search-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 15px;
+            align-items: end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input, .form-group select {
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .search-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .search-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .performance-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .perf-card {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .perf-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .perf-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .chart-panel, .results-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .perspective-match {
+            border: 1px solid #e1e5e9;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .perspective-match:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .match-header {
+            background: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        .match-topic {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .match-confidence {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .match-articles {
+            padding: 15px;
+        }
+
+        .article-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #ddd;
+        }
+
+        .article-item.left-leaning {
+            border-left-color: #007bff;
+            background: #f0f8ff;
+        }
+
+        .article-item.centrist {
+            border-left-color: #6c757d;
+            background: #f8f9fa;
+        }
+
+        .article-item.right-leaning {
+            border-left-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .article-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bias-badge {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .bias-badge.left-leaning {
+            background: #007bff;
+            color: white;
+        }
+
+        .bias-badge.centrist {
+            background: #6c757d;
+            color: white;
+        }
+
+        .bias-badge.right-leaning {
+            background: #dc3545;
+            color: white;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 News Perspective Analysis</h1>
+            <p>AI-Powered Cross-Perspective News Discovery</p>
+            <span class="speed-badge">⚡ ONNX Optimized - 6x Faster</span>
+        </div>
+
+        <div class="search-section">
+            <form class="search-form" id="searchForm">
+                <div class="form-group">
+                    <label for="query">Search Query</label>
+                    <input type="text" id="query" placeholder="e.g. election, climate change, economy" value="election">
+                </div>
+                <div class="form-group">
+                    <label for="days">Days Back</label>
+                    <select id="days">
+                        <option value="3">3 days</option>
+                        <option value="7" selected>1 week</option>
+                        <option value="14">2 weeks</option>
+                        <option value="21">3 weeks</option>
+                        <option value="30">1 month</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-btn" id="searchBtn">
+                    🔍 Analyze Perspectives
+                </button>
+            </form>
+        </div>
+
+        <div class="performance-panel" id="performancePanel">
+            <div class="performance-grid">
+                <div class="perf-card">
+                    <div class="perf-value" id="totalTime">-</div>
+                    <div class="perf-label">Total Time (seconds)</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value" id="articlesProcessed">-</div>
+                    <div class="perf-label">Articles Processed</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value" id="throughput">-</div>
+                    <div class="perf-label">Articles/Second</div>
+                </div>
+                <div class="perf-card">
+                    <div class="perf-value" id="matchesFound">-</div>
+                    <div class="perf-label">Perspective Matches</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="chart-panel">
+                <h2 class="panel-title">
+                    📊 Temporal News Development
+                </h2>
+                <div class="chart-container">
+                    <canvas id="temporalChart"></canvas>
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #007bff;"></div>
+                        <span>Left-Leaning</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #6c757d;"></div>
+                        <span>Centrist</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #dc3545;"></div>
+                        <span>Right-Leaning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-panel">
+                <h2 class="panel-title">
+                    🎯 Perspective Matches
+                </h2>
+                <div id="results">
+                    <div class="no-results">
+                        Enter a search query to discover diverse perspectives on news stories
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let temporalChart = null;
+
+        // Initialize chart
+        function initChart() {
+            const ctx = document.getElementById('temporalChart').getContext('2d');
+            temporalChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Left-Leaning',
+                            data: [],
+                            borderColor: '#007bff',
+                            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                            tension: 0.4,
+                            fill: false
+                        },
+                        {
+                            label: 'Centrist',
+                            data: [],
+                            borderColor: '#6c757d',
+                            backgroundColor: 'rgba(108, 117, 125, 0.1)',
+                            tension: 0.4,
+                            fill: false
+                        },
+                        {
+                            label: 'Right-Leaning',
+                            data: [],
+                            borderColor: '#dc3545',
+                            backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                            tension: 0.4,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false // Using custom legend
+                        },
+                        title: {
+                            display: true,
+                            text: 'News Article Timeline by Political Bias'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Time'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Number of Articles'
+                            },
+                            beginAtZero: true
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    }
+                }
+            });
+        }
+
+        // Update chart with temporal data
+        function updateChart(matches) {
+            if (!temporalChart) return;
+
+            // Process matches to extract temporal data
+            const timeData = {};
+            const biasLabels = {
+                0: 'left-leaning',
+                1: 'centrist', 
+                2: 'right-leaning'
+            };
+
+            // Initialize time buckets (by day)
+            const days = 7; // Show last 7 days
+            const now = new Date();
+            for (let i = days - 1; i >= 0; i--) {
+                const date = new Date(now);
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                timeData[dateStr] = {
+                    'left-leaning': 0,
+                    'centrist': 0,
+                    'right-leaning': 0
+                };
+            }
+
+            // Count articles by day and bias
+            matches.forEach(match => {
+                Object.values(match.perspectives).forEach(article => {
+                    const publishDate = new Date(article.published_at).toISOString().split('T')[0];
+                    const biasCategory = biasLabels[article.bias_label] || 'centrist';
+                    
+                    if (timeData[publishDate]) {
+                        timeData[publishDate][biasCategory]++;
+                    }
+                });
+            });
+
+            // Update chart data
+            const labels = Object.keys(timeData).map(date => {
+                const d = new Date(date);
+                return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            });
+
+            temporalChart.data.labels = labels;
+            temporalChart.data.datasets[0].data = Object.values(timeData).map(d => d['left-leaning']);
+            temporalChart.data.datasets[1].data = Object.values(timeData).map(d => d['centrist']);
+            temporalChart.data.datasets[2].data = Object.values(timeData).map(d => d['right-leaning']);
+
+            temporalChart.update();
+        }
+
+        // Search for perspectives
+        async function searchPerspectives(query, days) {
+            const searchBtn = document.getElementById('searchBtn');
+            const results = document.getElementById('results');
+            const performancePanel = document.getElementById('performancePanel');
+
+            // Show loading
+            searchBtn.disabled = true;
+            searchBtn.textContent = '🔄 Analyzing...';
+            results.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Finding diverse perspectives with ONNX optimization...</p>
+                </div>
+            `;
+
+            try {
+                const response = await fetch(`${API_BASE}/perspectives/find`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        days_back: parseInt(days),
+                        optimization: 'onnx',
+                        limit: 100
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                
+                // Update performance panel
+                if (data.performance) {
+                    updatePerformancePanel(data.performance);
+                    performancePanel.style.display = 'block';
+                }
+
+                // Update chart
+                if (data.matches && data.matches.length > 0) {
+                    updateChart(data.matches);
+                }
+
+                // Display results
+                displayResults(data.matches, data.collection_summary);
+
+            } catch (error) {
+                console.error('Search failed:', error);
+                results.innerHTML = `
+                    <div class="error">
+                        <strong>Error:</strong> ${error.message}
+                        <br><br>
+                        <strong>Troubleshooting:</strong>
+                        <ul>
+                            <li>Make sure the ONNX server is running: <code>python scripts/onnx_web_server.py</code></li>
+                            <li>Check that the server is accessible at ${API_BASE}</li>
+                            <li>Verify your API keys are configured</li>
+                        </ul>
+                    </div>
+                `;
+            } finally {
+                searchBtn.disabled = false;
+                searchBtn.textContent = '🔍 Analyze Perspectives';
+            }
+        }
+
+        // Update performance panel
+        function updatePerformancePanel(performance) {
+            document.getElementById('totalTime').textContent = performance.total_time.toFixed(2);
+            document.getElementById('articlesProcessed').textContent = performance.articles_processed;
+            document.getElementById('throughput').textContent = performance.throughput.toFixed(1);
+            document.getElementById('matchesFound').textContent = performance.matches_found;
+        }
+
+        // Display results
+        function displayResults(matches, collectionSummary) {
+            const results = document.getElementById('results');
+
+            if (!matches || matches.length === 0) {
+                results.innerHTML = `
+                    <div class="no-results">
+                        <h3>No perspective matches found</h3>
+                        <p>Try a broader search query or increase the time window.</p>
+                        ${collectionSummary ? `
+                            <div style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                                <strong>Articles collected:</strong>
+                                ${Object.entries(collectionSummary).map(([bias, count]) => 
+                                    `${bias.replace('_', '-')}: ${count}`
+                                ).join(', ')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                return;
+            }
+
+            const biasLabels = {
+                0: 'left-leaning',
+                1: 'centrist',
+                2: 'right-leaning'
+            };
+
+            const biasNames = {
+                'left-leaning': '🔵 Left-Leaning',
+                'centrist': '⚪ Centrist',
+                'right-leaning': '🔴 Right-Leaning'
+            };
+
+            const html = matches.map(match => `
+                <div class="perspective-match">
+                    <div class="match-header">
+                        <div class="match-topic">${match.topic}</div>
+                        <div class="match-confidence">
+                            Confidence: ${(match.confidence * 100).toFixed(1)}% | 
+                            ${Object.keys(match.perspectives).length} perspectives
+                        </div>
+                    </div>
+                    <div class="match-articles">
+                        ${Object.entries(match.perspectives).map(([bias, article]) => {
+                            const biasClass = biasLabels[article.bias_label] || bias;
+                            const publishDate = new Date(article.published_at).toLocaleDateString();
+                            return `
+                                <div class="article-item ${biasClass}">
+                                    <div class="article-title">${article.title}</div>
+                                    <div class="article-meta">
+                                        <span>
+                                            <strong>${article.source}</strong> • ${publishDate}
+                                        </span>
+                                        <span class="bias-badge ${biasClass}">
+                                            ${biasNames[biasClass] || biasClass}
+                                        </span>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `).join('');
+
+            results.innerHTML = html;
+        }
+
+        // Event listeners
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const query = document.getElementById('query').value.trim();
+            const days = document.getElementById('days').value;
+            
+            if (query) {
+                await searchPerspectives(query, days);
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initChart();
+            
+            // Auto-search on load with default query
+            const defaultQuery = document.getElementById('query').value;
+            if (defaultQuery) {
+                searchPerspectives(defaultQuery, 7);
+            }
+        });
+
+        // Test API connection on load
+        async function testConnection() {
+            try {
+                const response = await fetch(`${API_BASE}/health`);
+                if (response.ok) {
+                    console.log('✅ Connected to ONNX-optimized API server');
+                } else {
+                    console.warn('⚠️ API server responded with error');
+                }
+            } catch (error) {
+                console.warn('⚠️ Could not connect to API server. Make sure it\'s running:', error.message);
+            }
+        }
+
+        testConnection();
+    </script>
+</body>
+</html>

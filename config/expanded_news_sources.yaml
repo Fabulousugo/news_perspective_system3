@@ -1,0 +1,514 @@
+# api_configs:
+#   guardian:
+#     base_url: https://content.guardianapis.com/
+#     rate_limit: 5000
+#     requires_key: true
+#   newsapi:
+#     base_url: https://newsapi.org/v2/
+#     rate_limit: 1000
+#     requires_key: true
+#   rss:
+#     cache_duration: 3600
+#     rate_limit: 100
+#     requires_key: false
+# collection_strategies:
+#   alternative_focus:
+#     include_tiers:
+#     - alternative
+#     - conservative
+#     - think_tank
+#     max_articles_per_source: 30
+#   comprehensive:
+#     include_tiers:
+#     - major
+#     - secondary
+#     - business
+#     - international
+#     max_articles_per_source: 50
+#   international:
+#     include_tiers:
+#     - international
+#     - major
+#     max_articles_per_source: 25
+#   mainstream_only:
+#     include_tiers:
+#     - major
+#     max_articles_per_source: 100
+# news_sources:
+#   centrist:
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: Reuters
+#     source_id: reuters
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: Associated Press
+#     source_id: associated-press
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: BBC News
+#     source_id: bbc-news
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: USA Today
+#     source_id: usa-today
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: CBS News
+#     source_id: cbs-news
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: ABC News
+#     source_id: abc-news
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: Al Jazeera English
+#     source_id: al-jazeera-english
+#     tier: international
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: Bloomberg
+#     source_id: bloomberg
+#     tier: business
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 1
+#     name: Financial Times
+#     source_id: financial-times
+#     tier: business
+#   - bias_score: 1
+#     name: Deutsche Welle
+#     rss_feed: https://rss.dw.com/xml/rss-en-all
+#     tier: international
+#   - bias_score: 1
+#     name: France 24
+#     rss_feed: https://www.france24.com/en/rss
+#     tier: international
+#   left_leaning:
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: CNN
+#     source_id: cnn
+#     tier: major
+#   - api_endpoint: https://content.guardianapis.com/search
+#     bias_score: 0
+#     name: The Guardian
+#     source_id: the-guardian-uk
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: MSNBC
+#     source_id: msnbc
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: NPR
+#     source_id: npr
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: The Washington Post
+#     source_id: the-washington-post
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: The New York Times
+#     source_id: the-new-york-times
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: HuffPost
+#     source_id: the-huffington-post
+#     tier: secondary
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: Politico
+#     source_id: politico
+#     tier: secondary
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 0
+#     name: The Hill
+#     source_id: the-hill
+#     tier: secondary
+#   - bias_score: 0
+#     name: Salon
+#     rss_feed: https://www.salon.com/feed/
+#     tier: alternative
+#   - bias_score: 0
+#     name: Mother Jones
+#     rss_feed: https://www.motherjones.com/feed/
+#     tier: alternative
+#   - bias_score: 0
+#     name: The Nation
+#     rss_feed: https://www.thenation.com/feed/
+#     tier: alternative
+#   - bias_score: 0
+#     name: The Independent (UK)
+#     rss_feed: https://www.independent.co.uk/rss
+#     tier: international
+#   libertarian:
+#   - bias_score: 3
+#     name: Reason
+#     rss_feed: https://reason.com/feed/
+#     tier: alternative
+#   - bias_score: 3
+#     name: Cato Institute
+#     rss_feed: https://www.cato.org/rss/commentary
+#     tier: think_tank
+#   right_leaning:
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 2
+#     name: Fox News
+#     source_id: fox-news
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 2
+#     name: New York Post
+#     source_id: new-york-post
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 2
+#     name: Wall Street Journal
+#     source_id: the-wall-street-journal
+#     tier: major
+#   - api_endpoint: https://newsapi.org/v2/everything
+#     bias_score: 2
+#     name: Washington Examiner
+#     source_id: washington-examiner
+#     tier: major
+#   - bias_score: 2
+#     name: The Daily Wire
+#     rss_feed: https://www.dailywire.com/feeds/rss.xml
+#     tier: alternative
+#   - bias_score: 2
+#     name: Breitbart News
+#     rss_feed: https://feeds.feedburner.com/breitbart
+#     tier: alternative
+#   - bias_score: 2
+#     name: The Federalist
+#     rss_feed: https://thefederalist.com/feed/
+#     tier: alternative
+#   - bias_score: 2
+#     name: National Review
+#     rss_feed: https://www.nationalreview.com/feed/
+#     tier: conservative
+#   - bias_score: 2
+#     name: American Conservative
+#     rss_feed: https://www.theamericanconservative.com/feed/
+#     tier: conservative
+#   - bias_score: 2
+#     name: Washington Times
+#     rss_feed: https://www.washingtontimes.com/rss/headlines/
+#     tier: secondary
+#   - bias_score: 2
+#     name: The Telegraph (UK)
+#     rss_feed: https://www.telegraph.co.uk/rss.xml
+#     tier: international
+# source_tiers:
+#   alternative: Alternative/opinion sources
+#   business: Business/financial focus
+#   conservative: Conservative publications
+#   international: International sources
+#   major: Primary mainstream sources
+#   secondary: Secondary mainstream sources
+#   think_tank: Think tanks and policy institutes
+
+# config/expanded_news_sources.yaml - Much more diverse source coverage
+
+news_sources:
+  left_leaning:
+    # Major left-leaning sources
+    - name: "CNN"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "cnn"
+      bias_score: 0
+      tier: "major"
+      
+    - name: "The Guardian"
+      api_endpoint: "https://content.guardianapis.com/search"
+      source_id: "the-guardian-uk"
+      bias_score: 0
+      tier: "major"
+      
+    - name: "MSNBC"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "msnbc"
+      bias_score: 0
+      tier: "major"
+      
+    - name: "NPR"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "npr"
+      bias_score: 0
+      tier: "major"
+      
+    - name: "The Washington Post"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "the-washington-post"
+      bias_score: 0
+      tier: "major"
+      
+    - name: "The New York Times"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "the-new-york-times"
+      bias_score: 0
+      tier: "major"
+      
+    # Additional left sources
+    - name: "HuffPost"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "the-huffington-post"
+      bias_score: 0
+      tier: "secondary"
+      
+    - name: "Politico"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "politico"
+      bias_score: 0
+      tier: "secondary"
+      
+    - name: "The Hill"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "the-hill"
+      bias_score: 0
+      tier: "secondary"
+      
+    - name: "Salon"
+      rss_feed: "https://www.salon.com/feed/"
+      bias_score: 0
+      tier: "alternative"
+      
+    - name: "Mother Jones"
+      rss_feed: "https://www.motherjones.com/feed/"
+      bias_score: 0
+      tier: "alternative"
+      
+    - name: "The Nation"
+      rss_feed: "https://www.thenation.com/feed/"
+      bias_score: 0
+      tier: "alternative"
+
+  centrist:
+    # Major centrist sources
+    - name: "Reuters"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "reuters"
+      bias_score: 1
+      tier: "major"
+      
+    - name: "Associated Press"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "associated-press"
+      bias_score: 1
+      tier: "major"
+      
+    - name: "BBC News"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "bbc-news"
+      bias_score: 1
+      tier: "major"
+      
+    - name: "USA Today"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "usa-today"
+      bias_score: 1
+      tier: "major"
+      
+    - name: "CBS News"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "cbs-news"
+      bias_score: 1
+      tier: "major"
+      
+    - name: "ABC News"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "abc-news"
+      bias_score: 1
+      tier: "major"
+      
+    # International centrist
+    - name: "Al Jazeera English"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "al-jazeera-english"
+      bias_score: 1
+      tier: "international"
+      
+    - name: "Deutsche Welle"
+      rss_feed: "https://rss.dw.com/xml/rss-en-all"
+      bias_score: 1
+      tier: "international"
+      
+    - name: "France 24"
+      rss_feed: "https://www.france24.com/en/rss"
+      bias_score: 1
+      tier: "international"
+      
+    # Financial/Business (generally centrist)
+    - name: "Bloomberg"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "bloomberg"
+      bias_score: 1
+      tier: "business"
+      
+    - name: "Financial Times"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "financial-times"
+      bias_score: 1
+      tier: "business"
+
+  right_leaning:
+    # Major right-leaning sources
+    - name: "Fox News"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "fox-news"
+      bias_score: 2
+      tier: "major"
+      
+    - name: "New York Post"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "new-york-post"
+      bias_score: 2
+      tier: "major"
+      
+    - name: "Wall Street Journal"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "the-wall-street-journal"
+      bias_score: 2
+      tier: "major"
+      
+    - name: "Washington Examiner"
+      api_endpoint: "https://newsapi.org/v2/everything"
+      source_id: "washington-examiner"
+      bias_score: 2
+      tier: "major"
+      
+    # Additional right sources
+    - name: "The Daily Wire"
+      rss_feed: "https://www.dailywire.com/feeds/rss.xml"
+      bias_score: 2
+      tier: "alternative"
+      
+    - name: "Breitbart News"
+      rss_feed: "https://feeds.feedburner.com/breitbart"
+      bias_score: 2
+      tier: "alternative"
+      
+    - name: "The Federalist"
+      rss_feed: "https://thefederalist.com/feed/"
+      bias_score: 2
+      tier: "alternative"
+      
+    - name: "National Review"
+      rss_feed: "https://www.nationalreview.com/feed/"
+      bias_score: 2
+      tier: "conservative"
+      
+    - name: "The Weekly Standard"
+      rss_feed: "https://www.weeklystandard.com/rss.xml"
+      bias_score: 2
+      tier: "conservative"
+      
+    - name: "American Conservative"
+      rss_feed: "https://www.theamericanconservative.com/feed/"
+      bias_score: 2
+      tier: "conservative"
+      
+    - name: "Washington Times"
+      rss_feed: "https://www.washingtontimes.com/rss/headlines/"
+      bias_score: 2
+      tier: "secondary"
+      
+    - name: "New York Sun"
+      rss_feed: "https://www.nysun.com/rss.xml"
+      bias_score: 2
+      tier: "secondary"
+
+  libertarian:
+    # Libertarian sources (often independent perspective)
+    - name: "Reason"
+      rss_feed: "https://reason.com/feed/"
+      bias_score: 3
+      tier: "alternative"
+      
+    - name: "Cato Institute"
+      rss_feed: "https://www.cato.org/rss/commentary"
+      bias_score: 3
+      tier: "think_tank"
+
+  international:
+    # Major international sources for global perspective
+    - name: "The Times (UK)"
+      rss_feed: "https://www.thetimes.co.uk/rss"
+      bias_score: 1
+      tier: "international"
+      
+    - name: "The Telegraph (UK)"
+      rss_feed: "https://www.telegraph.co.uk/rss.xml"
+      bias_score: 2
+      tier: "international"
+      
+    - name: "The Independent (UK)"
+      rss_feed: "https://www.independent.co.uk/rss"
+      bias_score: 0
+      tier: "international"
+      
+    - name: "Globe and Mail (Canada)"
+      rss_feed: "https://www.theglobeandmail.com/arc/outboundfeeds/rss/"
+      bias_score: 1
+      tier: "international"
+      
+    - name: "Sydney Morning Herald"
+      rss_feed: "https://www.smh.com.au/rss/feed.xml"
+      bias_score: 1
+      tier: "international"
+      
+
+# API configurations
+api_configs:
+  newsapi:
+    base_url: "https://newsapi.org/v2/"
+    rate_limit: 1000  # requests per day
+    requires_key: true
+    
+  guardian:
+    base_url: "https://content.guardianapis.com/"
+    rate_limit: 5000  # requests per day
+    requires_key: true
+    
+  rss:
+    rate_limit: 100  # requests per hour per feed
+    requires_key: false
+    cache_duration: 3600  # seconds
+
+# Source quality tiers
+source_tiers:
+  major: "Primary mainstream sources"
+  secondary: "Secondary mainstream sources" 
+  alternative: "Alternative/opinion sources"
+  business: "Business/financial focus"
+  international: "International sources"
+  think_tank: "Think tanks and policy institutes"
+  conservative: "Conservative publications"
+
+# Collection strategies
+collection_strategies:
+  comprehensive:
+    include_tiers: ["major", "secondary", "business", "international"]
+    max_articles_per_source: 50
+    
+  mainstream_only:
+    include_tiers: ["major"]
+    max_articles_per_source: 100
+    
+  alternative_focus:
+    include_tiers: ["alternative", "conservative", "think_tank"]
+    max_articles_per_source: 30
+    
+  international:
+    include_tiers: ["international", "major"]
+    max_articles_per_source: 25

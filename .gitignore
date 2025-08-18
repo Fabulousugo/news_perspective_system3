@@ -1,0 +1,187 @@
+# API Keys and Sensitive Configuration
+.env
+.env.local
+.env.production
+.env.development
+config/keys.json
+config/secrets.json
+api_keys.txt
+credentials.json
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+conda-env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Machine Learning & Data
+models/
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+datasets/
+data/raw/
+data/processed/
+training_data/
+*.csv
+*.json.gz
+*.parquet
+*.feather
+all_the_news_dataset/
+news_cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+database.db
+news.db
+sentiment.db
+
+# Cache and Temporary Files
+cache/
+temp/
+tmp/
+*.cache
+.cache/
+news_cache/
+article_cache/
+sentiment_cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+scrapy.log
+crawler.log
+
+# Node.js (if using any JS tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+.nox/
+htmlcov/
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Flask/Django specific
+instance/
+.webassets-cache
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Scrapy
+.scrapy
+
+# Web scraping data
+scraped_articles/
+downloaded_pages/
+crawl_data/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large model files (comment out if you want to track them)
+# *.bin
+# pytorch_model.bin
+# tf_model.h5
+
+# Frontend build artifacts (if using build tools later)
+dist/
+build/
+.parcel-cache/
+
+# Environment-specific
+production.py
+development.py
+local_config.py
+
+# News API response cache
+api_responses/
+news_json/
+rss_cache/

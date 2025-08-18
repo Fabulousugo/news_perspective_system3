@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Perspective Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .search-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .search-form {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 12px 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .control-group select, .control-group input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .search-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .stats-bar {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .chart-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border-left: 4px solid #ddd;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .news-card.left-leaning {
+            border-left-color: #3b82f6;
+        }
+
+        .news-card.centrist {
+            border-left-color: #6b7280;
+        }
+
+        .news-card.right-leaning {
+            border-left-color: #ef4444;
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .bias-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .bias-badge.left-leaning {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .bias-badge.centrist {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .bias-badge.right-leaning {
+            background: #fecaca;
+            color: #dc2626;
+        }
+
+        .perspectives-badge {
+            background: #f0f9ff;
+            color: #0284c7;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .news-source {
+            font-weight: 600;
+        }
+
+        .news-time {
+            font-style: italic;
+        }
+
+        .news-description {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .perspectives-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .perspectives-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .perspective-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            padding: 8px;
+            background: #f9fafb;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .perspective-badge {
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .similarity-score {
+            background: #ecfdf5;
+            color: #059669;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 10px;
+            margin-left: auto;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .loading-spinner {
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 3px solid white;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #fef2f2;
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #dc2626;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .modal-close:hover {
+            color: #000;
+        }
+
+        .perspective-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .comparison-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .search-form {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-input {
+                min-width: auto;
+            }
+
+            .controls {
+                flex-wrap: wrap;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .powered-by {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        .speed-badge {
+            background: #10b981;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 News Perspective Dashboard</h1>
+            <p>Discover diverse viewpoints on current events with AI-powered analysis <span class="speed-badge">ONNX OPTIMIZED</span></p>
+        </div>
+
+        <div class="search-section">
+            <form class="search-form" id="searchForm">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchQuery" 
+                    placeholder="Search for news topics (e.g., 'election', 'climate change', 'economy')"
+                    value=""
+                >
+                <div class="controls">
+                    <div class="control-group">
+                        <label>Days Back</label>
+                        <select id="daysBack" title="Days Back">
+                            <option value="3">3 days</option>
+                            <option value="7" selected>7 days</option>
+                            <option value="14">14 days</option>
+                            <option value="21">21 days</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Optimization</label>
+                        <select id="optimization" title="Optimization">
+                            <option value="onnx" selected>ONNX (Fastest)</option>
+                            <option value="quantized">Quantized</option>
+                            <option value="standard">Standard</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-btn" id="searchBtn">
+                        🔍 Analyze News
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="stats-bar" id="statsBar">
+            <div class="stats-grid" id="statsGrid">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="chart-section" id="chartSection">
+            <h3>📈 Temporal News Analysis</h3>
+            <div class="chart-container">
+                <canvas id="newsChart"></canvas>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="loading-spinner"></div>
+            Processing news with ONNX optimization...
+        </div>
+
+        <div class="error" id="error" style="display: none;"></div>
+
+        <div class="news-grid" id="newsGrid">
+            <!-- News cards will be populated by JavaScript -->
+        </div>
+
+        <div class="powered-by">
+            Powered by ONNX-optimized DistilBERT • 3-6x faster analysis • Built with ❤️ for democratic discourse
+        </div>
+    </div>
+
+    <!-- Modal for detailed article view -->
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE_URL = 'http://localhost:8000';
+        
+        // Global variables
+        let currentData = null;
+        let newsChart = null;
+
+        // DOM elements
+        const searchForm = document.getElementById('searchForm');
+        const searchQuery = document.getElementById('searchQuery');
+        const daysBack = document.getElementById('daysBack');
+        const optimization = document.getElementById('optimization');
+        const searchBtn = document.getElementById('searchBtn');
+        const loading = document.getElementById('loading');
+        const error = document.getElementById('error');
+        const statsBar = document.getElementById('statsBar');
+        const statsGrid = document.getElementById('statsGrid');
+        const chartSection = document.getElementById('chartSection');
+        const newsGrid = document.getElementById('newsGrid');
+        const articleModal = document.getElementById('articleModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalContent = document.getElementById('modalContent');
+
+        // Event listeners
+        searchForm.addEventListener('submit', handleSearch);
+        modalClose.addEventListener('click', closeModal);
+        window.addEventListener('click', (e) => {
+            if (e.target === articleModal) closeModal();
+        });
+
+        // Auto-search on page load
+        window.addEventListener('load', () => {
+            searchQuery.value = 'election';
+            handleSearch(new Event('submit'));
+        });
+
+        async function handleSearch(e) {
+            e.preventDefault();
+            
+            const query = searchQuery.value.trim();
+            const days = parseInt(daysBack.value);
+            const opt = optimization.value;
+
+            if (!query) {
+                showError('Please enter a search query');
+                return;
+            }
+
+            showLoading();
+            hideError();
+            hideResults();
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/perspectives/find`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        days_back: days,
+                        optimization: opt,
+                        limit: 100
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                currentData = data;
+                
+                hideLoading();
+                displayResults(data);
+
+            } catch (err) {
+                hideLoading();
+                showError(`Failed to fetch news: ${err.message}. Make sure the ONNX server is running on port 8000.`);
+            }
+        }
+
+        function showLoading() {
+            loading.style.display = 'block';
+            searchBtn.disabled = true;
+            searchBtn.textContent = 'Analyzing...';
+        }
+
+        function hideLoading() {
+            loading.style.display = 'none';
+            searchBtn.disabled = false;
+            searchBtn.textContent = '🔍 Analyze News';
+        }
+
+        function showError(message) {
+            error.textContent = message;
+            error.style.display = 'block';
+        }
+
+        function hideError() {
+            error.style.display = 'none';
+        }
+
+        function hideResults() {
+            statsBar.style.display = 'none';
+            chartSection.style.display = 'none';
+            newsGrid.innerHTML = '';
+        }
+
+        function displayResults(data) {
+            displayStats(data);
+            displayChart(data);
+            displayNews(data.matches);
+        }
+
+        function displayStats(data) {
+            const stats = [
+                { label: 'Total Matches', value: data.matches.length, color: '#667eea' },
+                { label: 'Processing Time', value: `${data.performance.total_time.toFixed(2)}s`, color: '#10b981' },
+                { label: 'Articles/Second', value: Math.round(data.performance.throughput), color: '#f59e0b' },
+                { label: 'Optimization', value: data.performance.optimization_level.toUpperCase(), color: '#8b5cf6' }
+            ];
+
+            statsGrid.innerHTML = stats.map(stat => `
+                <div class="stat-item">
+                    <div class="stat-value" style="color: ${stat.color}">${stat.value}</div>
+                    <div class="stat-label">${stat.label}</div>
+                </div>
+            `).join('');
+
+            statsBar.style.display = 'block';
+        }
+
+        function displayChart(data) {
+            const ctx = document.getElementById('newsChart').getContext('2d');
+            
+            // Prepare temporal data
+            const timeData = {};
+            const biasColors = {
+                'left-leaning': '#3b82f6',
+                'centrist': '#6b7280', 
+                'right-leaning': '#ef4444'
+            };
+
+            // Group articles by date and bias
+            data.matches.forEach(match => {
+                Object.entries(match.perspectives).forEach(([bias, article]) => {
+                    const date = new Date(article.published_at).toDateString();
+                    if (!timeData[date]) timeData[date] = {};
+                    if (!timeData[date][bias]) timeData[date][bias] = 0;
+                    timeData[date][bias]++;
+                });
+            });
+
+            // Sort dates
+            const sortedDates = Object.keys(timeData).sort((a, b) => new Date(a) - new Date(b));
+            
+            // Prepare chart data
+            const datasets = [];
+            Object.keys(biasColors).forEach(bias => {
+                const data = sortedDates.map(date => timeData[date][bias] || 0);
+                datasets.push({
+                    label: bias.charAt(0).toUpperCase() + bias.slice(1).replace('-', ' '),
+                    data: data,
+                    borderColor: biasColors[bias],
+                    backgroundColor: biasColors[bias] + '20',
+                    fill: true,
+                    tension: 0.4
+                });
+            });
+
+            // Destroy existing chart
+            if (newsChart) newsChart.destroy();
+
+            // Create new chart
+            newsChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: sortedDates.map(date => new Date(date).toLocaleDateString()),
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `News Coverage Over Time: "${data.query}"`
+                        },
+                        legend: {
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Number of Articles'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Date'
+                            }
+                        }
+                    }
+                }
+            });
+
+            chartSection.style.display = 'block';
+        }
+
+        function displayNews(matches) {
+            if (!matches || matches.length === 0) {
+                newsGrid.innerHTML = '<div style="text-align: center; color: white; font-size: 1.1rem; grid-column: 1/-1;">No perspective matches found. Try a different query or time range.</div>';
+                return;
+            }
+
+            newsGrid.innerHTML = matches.map(match => {
+                // Get primary article (first one)
+                const primaryBias = Object.keys(match.perspectives)[0];
+                const primaryArticle = match.perspectives[primaryBias];
+                
+                // Count perspectives
+                const perspectiveCount = Object.keys(match.perspectives).length;
+                
+                return `
+                    <div class="news-card ${primaryBias}" onclick="openArticleModal('${match.story_id}')">
+                        <div class="news-header">
+                            <span class="bias-badge ${primaryBias}">${primaryBias.replace('-', ' ')}</span>
+                            ${perspectiveCount > 1 ? `<span class="perspectives-badge">${perspectiveCount} perspectives</span>` : ''}
+                        </div>
+                        
+                        <h3 class="news-title">${primaryArticle.title}</h3>
+                        
+                        <div class="news-meta">
+                            <span class="news-source">📰 ${primaryArticle.source}</span>
+                            <span class="news-time">🕒 ${new Date(primaryArticle.published_at).toLocaleDateString()}</span>
+                        </div>
+
+                        <div class="news-description">
+                            Topic: ${match.topic} • Confidence: ${(match.confidence * 100).toFixed(1)}%
+                        </div>
+
+                        ${perspectiveCount > 1 ? `
+                            <div class="perspectives-section">
+                                <div class="perspectives-title">🎯 Alternative Perspectives:</div>
+                                ${Object.entries(match.perspectives).slice(1).map(([bias, article]) => `
+                                    <div class="perspective-item">
+                                        <span class="perspective-badge ${bias}">${bias.replace('-', ' ')}</span>
+                                        <span style="flex: 1; font-size: 0.8rem;">${article.title.substring(0, 60)}...</span>
+                                        <span class="similarity-score">${(match.confidence * 100).toFixed(0)}%</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function openArticleModal(storyId) {
+            if (!currentData) return;
+
+            const match = currentData.matches.find(m => m.story_id === storyId);
+            if (!match) return;
+
+            const modalHTML = `
+                <h2>📰 ${match.topic}</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    <strong>Story Confidence:</strong> ${(match.confidence * 100).toFixed(1)}% • 
+                    <strong>Perspectives:</strong> ${Object.keys(match.perspectives).length}
+                </p>
+
+                <div class="perspective-comparison">
+                    ${Object.entries(match.perspectives).map(([bias, article]) => `
+                        <div class="comparison-card">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                <span class="bias-badge ${bias}">${bias.replace('-', ' ')}</span>
+                                <span style="font-size: 0.9rem; color: #666;">📰 ${article.source}</span>
+                            </div>
+                            
+                            <h4 style="margin-bottom: 10px; color: #1f2937;">${article.title}</h4>
+                            
+                            <p style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">
+                                🕒 ${new Date(article.published_at).toLocaleString()}
+                            </p>
+                            
+                            <a href="${article.url}" target="_blank" 
+                               style="display: inline-block; background: #667eea; color: white; padding: 8px 15px; 
+                                      border-radius: 6px; text-decoration: none; font-size: 0.9rem; margin-top: 10px;">
+                                📖 Read Full Article
+                            </a>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div style="margin-top: 25px; padding: 15px; background: #f9fafb; border-radius: 8px;">
+                    <h4 style="margin-bottom: 10px;">🔍 Analysis Details</h4>
+                    <p style="font-size: 0.9rem; color: #666;">
+                        This story was analyzed using ONNX-optimized models with semantic similarity matching. 
+                        Articles covering the same event from different political perspectives are grouped together 
+                        to provide a comprehensive view of the news coverage.
+                    </p>
+                </div>
+            `;
+
+            modalContent.innerHTML = modalHTML;
+            articleModal.style.display = 'block';
+        }
+
+        function closeModal() {
+            articleModal.style.display = 'none';
+        }
+
+        // Add some helper functions for better UX
+        function formatTimeAgo(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+            const diffDays = Math.floor(diffHrs / 24);
+
+            if (diffDays > 0) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+            if (diffHrs > 0) return `${diffHrs} hour${diffHrs > 1 ? 's' : ''} ago`;
+            return 'Recent';
+        }
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'Enter' && e.ctrlKey) handleSearch(e);
+        });
+
+        // Add some sample queries for better UX
+        const sampleQueries = ['election', 'climate change', 'economy', 'healthcare', 'immigration', 'education'];
+        
+        searchQuery.addEventListener('focus', (e) => {
+            if (!e.target.value) {
+                e.target.placeholder = `Try: ${sampleQueries[Math.floor(Math.random() * sampleQueries.length)]}`;
+            }
+        });
+    </script>
+</body>
+</html>
