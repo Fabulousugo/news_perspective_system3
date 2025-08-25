@@ -1,4 +1,4 @@
-# src/api/simple_routes.py - Simple, working API without import errors
+# src/api/simple_routes.py - Simple API routes
 
 import sys, os
 from pathlib import Path
