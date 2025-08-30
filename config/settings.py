@@ -37,7 +37,7 @@ class Settings:
     # Processing settings
     MIN_ARTICLE_LENGTH = 100
     MAX_ARTICLES_PER_SOURCE = 1000
-    SIMILARITY_THRESHOLD = 0.45  # Lowered from 0.75 for better recall
+    SIMILARITY_THRESHOLD = 0.40  # Lowered from 0.75 for better recall
     
     @classmethod
     def load_news_sources(cls) -> Dict:

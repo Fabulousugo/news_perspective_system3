@@ -1,0 +1,1075 @@
+[
+  {
+    "match_id": "match_000",
+    "topic": "Texas",
+    "confidence": 0.8499283790588379,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Texas Republicans approve new congressional maps as partisan redistricting race escalates | CNN Politics",
+        "content_preview": "The Texas Senate on Saturday approved new congressional maps drawn to help Republicans win as many as five more House seats in next years midterm elections.\r\nThe vote was the final legislative hurdle\u2026 [+6905 chars]",
+        "url": "https://www.cnn.com/2025/08/23/politics/texas-republicans-approve-new-congressional-maps-as-partisan-redistricting-race-escalates",
+        "published_at": "2025-08-23T07:04:20+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "Texas redistricting fight shakes up battle lines for both parties in key US Senate race",
+        "content_preview": "HOUSTON -- Just as Democratic U.S. Senate candidate Colin Allred was holding a town hall near the Mexican border as part of an unrig Texas campaign tour, the states Democratic fundraising powerhouse \u2026 [+6843 chars]",
+        "url": "https://abcnews.go.com/Politics/wireStory/texas-redistricting-fight-shakes-battle-lines-parties-key-124910583",
+        "published_at": "2025-08-24T13:02:22+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_001",
+    "topic": "Kilmar",
+    "confidence": 0.7691820859909058,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Trump administration might deport Kilmar Abrego Garcia to Uganda | CNN Politics",
+        "content_preview": "The Trump administration might try to deport Kilmar Abrego Garcia to Uganda in the coming days, according to a notice sent by a Department of Homeland Security official to his lawyers on Friday.\r\nThe\u2026 [+2900 chars]",
+        "url": "https://www.cnn.com/2025/08/23/politics/kilmar-abrego-garcia-uganda-deport",
+        "published_at": "2025-08-23T15:46:36+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Kilmar Abrego Garcia taken into ICE custody, lawyer says",
+        "content_preview": "Washington \u2014 Kilmar Abrego Garcia\u00a0was taken into custody Monday by immigration authoritiesfollowing his release from criminal custody last week, his lawyer said.\u00a0\r\nAbrego Garcia, a native of El Salva\u2026 [+2777 chars]",
+        "url": "https://www.cbsnews.com/news/kilmar-abrego-garcia-ice-custody-deportation/",
+        "published_at": "2025-08-25T12:21:04+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_002",
+    "topic": "Kilmar",
+    "confidence": 0.7466745376586914,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Kilmar Abrego Garcia urges supporters to \u2018continue to fight\u2019 as he checks into ICE facility | CNN Politics",
+        "content_preview": "Kilmar Abrego Garcia, the Maryland man who was unlawfully deported to El Salvador earlier this year, was taken into custody by US Immigration and Customs Enforcement after turning himself into a faci\u2026 [+3784 chars]",
+        "url": "https://www.cnn.com/2025/08/25/politics/kilmar-abrego-garcia-baltimore-rally",
+        "published_at": "2025-08-25T09:00:42+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Where Kilmar Abrego Garcia's case stands as he's detained by ICE again",
+        "content_preview": "Copyright \u00a92025 CBS Interactive Inc. All rights reserved.",
+        "url": "https://www.cbsnews.com/video/where-kilmar-abrego-garcias-case-stands-as-hes-detained-by-ice-again/",
+        "published_at": "2025-08-25T17:41:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_003",
+    "topic": "Kilmar",
+    "confidence": 0.7245762348175049,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Kilmar Abrego Garcia has been released from criminal custody, 5 months after he was unlawfully deported | CNN Politics",
+        "content_preview": "Kilmar Abrego Garcia was released from criminal custody in Tennessee on Friday, the latest development in a dramatic legal saga surrounding the wrongly deported Maryland father of three.\r\nThis marks \u2026 [+5491 chars]",
+        "url": "https://www.cnn.com/2025/08/22/politics/kilmar-abrego-garcia-release",
+        "published_at": "2025-08-22T19:31:32+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Kilmar Abrego Garcia could be sent to Uganda, DHS official says",
+        "content_preview": "Copyright \u00a92025 CBS Interactive Inc. All rights reserved.",
+        "url": "https://www.cbsnews.com/video/kilmar-abrego-garcia-could-be-sent-uganda-dhs-official-says/",
+        "published_at": "2025-08-22T23:18:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_004",
+    "topic": "Federal",
+    "confidence": 0.718329906463623,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Judge tosses Trump administration\u2019s lawsuit against Maryland\u2019s 15 federal judges, calling it a \u2018constitutional free-for-all\u2019 | CNN Politics",
+        "content_preview": "See all topics\r\nA federal judge on Tuesday threw out an aggressive, unusual lawsuit the Trump administration brought earlier this year against all 15 federal judges in Maryland, rejecting a bid by th\u2026 [+3043 chars]",
+        "url": "https://www.cnn.com/2025/08/26/politics/judge-dismisses-lawsuit-maryland-immigration",
+        "published_at": "2025-08-26T14:54:51+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Associated Press",
+        "title": "Roanoke-based federal judge tosses lawsuit by Trump against Maryland federal judges, calling it 'potentially calamitous'",
+        "content_preview": "BALTIMORE (AP) A Roanoke-based federal judge on Tuesday threw out the Trump administrations lawsuit against Marylands entire federal bench in an emphatic ruling that underscored the extraordinary nat\u2026 [+6023 chars]",
+        "url": "https://apnews.com/article/trump-lawsuit-maryland-judges-dc9c203cfc4ca37814179d2b220e361f",
+        "published_at": "2025-08-26T18:34:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_005",
+    "topic": "Trump",
+    "confidence": 0.6995823383331299,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "The Guardian",
+        "title": "Trump news at a glance: president hints he already has replacement in mind for Fed governor Lisa Cook",
+        "content_preview": "Donald Trump has suggested he already has a replacement in mind for the Federal Reserve governor he is trying to force, even as Lisa Cook said she would sue the administration over her removal. Speaking during a cabinet meeting lasting more than three hours on Tuesday, the US president said: \u201cWe have some very good people for that position. I think, maybe in my own mind, I have somebody that I like.\u201d Trump said he would consult Scott Bessent, the treasury secretary, and Howard Lutnick, the comme",
+        "url": "https://www.theguardian.com/us-news/2025/aug/27/trump-news-at-a-glance-president-hints-he-already-has-replacement-in-mind-for-fed-governor-lisa-cook",
+        "published_at": "2025-08-27T00:51:49+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "USA Today",
+        "title": "Trump said he fired a Fed Gov. She said she's not stepping down. Who is Lisa Cook?",
+        "content_preview": "President Donald Trump said he fired Federal Reserve Board Governor Lisa Cook on Aug. 25, his latest move to assert influence over the U.S. central bank after months of expressing dissatisfaction wit\u2026 [+4068 chars]",
+        "url": "https://www.usatoday.com/story/money/2025/08/26/federal-reserve-lisa-cook-allegations-trump/85829890007/",
+        "published_at": "2025-08-26T14:43:38+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_006",
+    "topic": "Releases",
+    "confidence": 0.6972059011459351,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Live updates: Justice Department releases transcripts from Ghislaine Maxwell\u2019s interview | CNN Politics",
+        "content_preview": "Soon before the Justice Department released the transcript Friday, President Donald Trump told reporters that he supported transparency in the case.\r\nInnocent people shouldnt be hurt. But Im in suppo\u2026 [+1211 chars]",
+        "url": "https://www.cnn.com/politics/live-news/ghislaine-maxwell-jeffrey-epstein-doj-documents-08-22-25",
+        "published_at": "2025-08-22T18:53:13+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump's DOJ releases transcript of Ghislaine Maxwell's interview with Blanche",
+        "content_preview": "The Justice Department on Friday releasedtranscripts of Deputy Attorney General Todd Blanche's two-day interview with convicted sex trafficker and Jeffrey Epstein associate Ghislaine Maxwell.\r\nThe tr\u2026 [+388 chars]",
+        "url": "https://www.cbsnews.com/news/trump-doj-transcript-ghislaine-maxwell-todd-blanche/",
+        "published_at": "2025-08-22T19:09:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_007",
+    "topic": "House",
+    "confidence": 0.6645058393478394,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "House panel to make Epstein files public after redactions to protect victim identities | CNN Politics",
+        "content_preview": "The House Committee on Oversight and Government Reform intends to make public some files it subpoenaed related to the Jeffrey Epstein case, though it will first redact them to shield victims IDs and \u2026 [+1929 chars]",
+        "url": "https://www.cnn.com/2025/08/19/politics/epstein-files-release-house-committee",
+        "published_at": "2025-08-19T17:33:55+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "House Oversight Committee subpoenas Jeffrey Epstein's estate",
+        "content_preview": "Washington \u2014 The Republican leader of the House Oversight and Government Reform Committee has issued a subpoena to the estate of convicted sex offender Jeffrey Epstein seeking documents and other mat\u2026 [+5420 chars]",
+        "url": "https://www.cbsnews.com/news/house-oversight-committee-subpoena-jeffrey-epstein-estate-trump-birthday-letter-book/",
+        "published_at": "2025-08-25T20:18:28+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_008",
+    "topic": "Conducts",
+    "confidence": 0.6503311395645142,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "FBI conducts search at John Bolton\u2019s home | CNN Politics",
+        "content_preview": "The FBI conducted a court-authorized search at John Boltons home as part of a national security investigation, according to a person familiar with the matter.\r\nCNN observed FBI personnel near the for\u2026 [+640 chars]",
+        "url": "https://www.cnn.com/2025/08/22/politics/john-bolton-fbi-search",
+        "published_at": "2025-08-22T11:46:26+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "USA Today",
+        "title": "Bolton investigated over classified documents, not politics: VP Vance tells NBC",
+        "content_preview": "WASHINGTON Vice President JD Vance said classified documents are certainly part of the search of former national security adviser John Boltons house and he told Meet the Press with Kristen Welker tha\u2026 [+3297 chars]",
+        "url": "https://www.usatoday.com/story/news/politics/2025/08/22/john-bolton-fbi-investigation-jd-vance-classified-documents/85780165007/",
+        "published_at": "2025-08-22T18:18:21+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_009",
+    "topic": "Trump",
+    "confidence": 0.6032363772392273,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Supreme Court allows Trump to block $783 million in National Institutes of Health grants for now | CNN Politics",
+        "content_preview": "A heavily fractured Supreme Court on Thursday allowed the Trump administration to halt nearly $800 million in research grants awarded by the National Institutes of Health that officials say touch on \u2026 [+902 chars]",
+        "url": "https://www.cnn.com/2025/08/21/politics/supreme-court-health-nih-grants",
+        "published_at": "2025-08-21T21:15:24+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Judge blocks Trump from cutting funding to dozens of \"sanctuary\" cities",
+        "content_preview": "A federal judge on Friday blocked the Trump administration from cutting off federal funding to dozens of \"sanctuary\" cities and counties \u2014 covering several of the largest cities in the U.S.\r\nThe judg\u2026 [+959 chars]",
+        "url": "https://www.cbsnews.com/news/judge-blocks-trump-cutting-funding-sanctuary-cities-los-angeles-chicago/",
+        "published_at": "2025-08-23T02:12:01+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_010",
+    "topic": "Trump'S",
+    "confidence": 0.5930887460708618,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "MSNBC",
+        "title": "Trump's D.C. takeover is more than political theater \u2014 Democrats should act like it",
+        "content_preview": "A number of high-profile Democrats have held back from directly calling out the authoritarian nature of President Donald Trumps takeover of Washington, D.C., in part, it appears, because theyre conce\u2026 [+4045 chars]",
+        "url": "https://www.msnbc.com/opinion/msnbc-opinion/trump-democrats-strategy-washington-dc-police-national-guard-rcna225710",
+        "published_at": "2025-08-19T20:13:43+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Al Jazeera English",
+        "title": "\u2018On edge\u2019: Trump\u2019s military deployment in US capital sparks fear, confusion",
+        "content_preview": "Washington, DC, United States Outside Union Station in the US capital, bored-looking soldiers linger near two large armoured vehicles as commuters and tourists snap photos of the unusual scene.\r\nInsi\u2026 [+11048 chars]",
+        "url": "https://www.aljazeera.com/news/2025/8/22/on-edge-trumps-military-deployment-in-us-capital-sparks-fear-confusion",
+        "published_at": "2025-08-22T15:53:58+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_011",
+    "topic": "Ghislaine",
+    "confidence": 0.5638585090637207,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Exclusive: Ghislaine Maxwell was honored at a prestigious Clinton event years after sexual misconduct allegations surfaced | CNN Politics",
+        "content_preview": "Years after she was publicly accused in civil lawsuits and the press of helping Jeffrey Epstein groom and sexually abuse minors, Ghislaine Maxwell was an honored guest at the prestigious Clinton Glob\u2026 [+12858 chars]",
+        "url": "https://www.cnn.com/2025/08/24/politics/kfile-ghislaine-maxwell-clinton-conference-vis",
+        "published_at": "2025-08-24T14:07:28+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Ghislaine Maxwell's interview on Epstein case released by DOJ",
+        "content_preview": "The Justice Department on Friday releasedtranscripts of Deputy Attorney General Todd Blanche's two-day interview with convicted sex trafficker and Jeffrey Epstein associate Ghislaine Maxwell.\r\nThe tr\u2026 [+5467 chars]",
+        "url": "https://www.cbsnews.com/news/ghislaine-maxwell-interview-jeffrey-epstein-doj-transcript/",
+        "published_at": "2025-08-22T22:01:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_012",
+    "topic": "Abrego",
+    "confidence": 0.5493466854095459,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Abrego Garcia\u2019s lawyers urge judge to drop his criminal case, alleging \u2018vindictive and selective prosecution\u2019 | CNN Politics",
+        "content_preview": "Attorneys for Kilmar Abrego Garcia are asking the federal judge overseeing his criminal case to throw out the human smuggling charges hes facing, alleging the Justice Department singled him out for p\u2026 [+3420 chars]",
+        "url": "https://www.cnn.com/2025/08/19/politics/abrego-garcia-request-case-dismissal-vindictive-selective-prosecution",
+        "published_at": "2025-08-20T01:59:02+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Kilmar Abrego Garcia could be deported to Uganda, official says",
+        "content_preview": "The Trump administration may try to deport Kilmar Abrego Garcia to Uganda, according to a senior Department of Homeland Security official and a notice sent by government officials obtained by CBS New\u2026 [+2253 chars]",
+        "url": "https://www.cbsnews.com/news/kilmar-abrego-garcia-could-be-deported-to-uganda/",
+        "published_at": "2025-08-22T23:12:45+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_013",
+    "topic": "Crime",
+    "confidence": 0.5315000414848328,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "GOP governors are sending troops to DC. Their states have 10 cities with higher crime rates | CNN Politics",
+        "content_preview": "At least ten cities in states whose Republican governors are deploying National Guard troops to Washington, DC, had higher rates of violent crime or homicide than DC last year, according to a CNN rev\u2026 [+7882 chars]",
+        "url": "https://www.cnn.com/2025/08/22/politics/gop-governors-troops-dc-10-cities-crime-rates",
+        "published_at": "2025-08-22T10:00:42+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump suggests Chicago next for federal crime crackdown, then New York City",
+        "content_preview": "Washington \u2014 President Trump on Friday said Chicago will probably be the federal government's next target for its anti-crime effort, following the\u00a0ongoing operation in Washington, D.C., with New York\u2026 [+2343 chars]",
+        "url": "https://www.cbsnews.com/news/trump-chicago-next-federal-law-enforcement-crime-then-new-york-city/",
+        "published_at": "2025-08-22T18:29:59+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_014",
+    "topic": "Strange",
+    "confidence": 0.5271068811416626,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "The strange divide in how Americans experience summer temperatures | CNN",
+        "content_preview": "Chris Mooney is a Pulitzer Prize-winning journalist and a CNN Climate contributor. He is currently a professor of practice in the Environmental Institute at the University of Virginia.\r\nThe contiguou\u2026 [+9242 chars]",
+        "url": "https://www.cnn.com/2025/08/19/climate/us-summer-warming-hole-vis",
+        "published_at": "2025-08-19T11:00:42+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "Green spaces are key to combating record heat in marginalized communities",
+        "content_preview": "Keith Lambert and his family cope with the extreme heat of summertime Chicago by going in and out of their house as quickly as possible and making sure their insulated shades are always drawn.\r\nIts r\u2026 [+7428 chars]",
+        "url": "https://abcnews.go.com/US/wireStory/green-spaces-key-combating-record-heat-marginalized-communities-124877040",
+        "published_at": "2025-08-22T12:39:09+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_015",
+    "topic": "Trump",
+    "confidence": 0.5240180492401123,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "MSNBC",
+        "title": "Trump can legally send National Guard to other cities, say retired military",
+        "content_preview": "President Donald Trump faced few obstacles when he decided to send the National Guard into Washington, D.C., because its not a state.\r\nAs he looks to expand the effort to New York, Chicago and Baltim\u2026 [+6542 chars]",
+        "url": "https://www.msnbc.com/news/news-analysis/trump-national-guard-chicago-baltimore-project-47-newsletter-rcna227110",
+        "published_at": "2025-08-26T16:10:34+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Al Jazeera English",
+        "title": "Trump has no basis to deploy troops to Chicago: Top Democratic US lawmaker",
+        "content_preview": "Democratic leaders in the United States are warning that President Donald Trump does not have the authority to deploy US troops to Chicago amid reports of administration plans to send National Guard \u2026 [+3545 chars]",
+        "url": "https://www.aljazeera.com/news/2025/8/24/trump-has-no-basis-to-deploy-troops-to-chicago-top-democratic-us-lawmaker",
+        "published_at": "2025-08-24T19:34:19+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_016",
+    "topic": "Redistricting",
+    "confidence": 0.5005345940589905,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "MSNBC",
+        "title": "Republicans started the redistricting arms race. It\u2019s up to Democrats to finish it.",
+        "content_preview": "This is an adapted excerpt from the Aug. 21 episode of All In with Chris Hayes.\r\nThe redistricting arms race is upon us. On Thursday, California lawmakers passed the Election Rigging Response Act, a \u2026 [+5133 chars]",
+        "url": "https://www.msnbc.com/top-stories/latest/california-texas-redistricting-trump-congress-control-rcna226645",
+        "published_at": "2025-08-22T20:32:41+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "Texas redistricting fight shakes up battle lines for both parties in key US Senate race",
+        "content_preview": "HOUSTON -- Just as Democratic U.S. Senate candidate Colin Allred was holding a town hall near the Mexican border as part of an unrig Texas campaign tour, the states Democratic fundraising powerhouse \u2026 [+6843 chars]",
+        "url": "https://abcnews.go.com/US/wireStory/texas-redistricting-fight-shakes-battle-lines-parties-key-124910581",
+        "published_at": "2025-08-23T04:22:31+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_017",
+    "topic": "Fact",
+    "confidence": 0.4979155659675598,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Fact check: Trump\u2019s barrage of false claims about crime in Washington, DC | CNN Politics",
+        "content_preview": "President Donald Trump delivered a barrage of false claims about crime in Washington, DC, during a series of Monday comments defending his takeover of the police force and deployment of the National \u2026 [+5548 chars]",
+        "url": "https://www.cnn.com/2025/08/25/politics/fact-check-trump-dc-national-guard",
+        "published_at": "2025-08-25T22:05:06+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump says U.S. will seek the death penalty for murders committed in D.C.",
+        "content_preview": "Washington \u2014 President Trump said Tuesday the federal government would seek the death penalty for murders committed in Washington, D.C.\r\nIt's the latest move in a federal crackdown on crime, with Was\u2026 [+1797 chars]",
+        "url": "https://www.cbsnews.com/news/trump-death-penalty-murders-washington-dc/",
+        "published_at": "2025-08-26T18:25:50+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_018",
+    "topic": "Trump",
+    "confidence": 0.4801052510738373,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Trump says Chicago next up for federal crime crackdown | CNN Politics",
+        "content_preview": "President Donald Trump said Friday that Chicago will be the next city that his administration targets for a federal crackdown on crime and suggested a longer and more intense campaign in the nations \u2026 [+3818 chars]",
+        "url": "https://www.cnn.com/2025/08/22/politics/chicago-national-guard-trump-crackdown",
+        "published_at": "2025-08-22T17:55:09+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump signs executive orders to end cashless bail in D.C. and ban flag burning",
+        "content_preview": "Washington \u2014 President Trump on Monday signed an executive order to push Washington, D.C., and other localities to end cashless bail for arrested suspects, threatening to withhold federal funding fro\u2026 [+3327 chars]",
+        "url": "https://www.cbsnews.com/news/trump-flag-burning-cashless-bail-executive-orders/",
+        "published_at": "2025-08-25T15:51:14+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_019",
+    "topic": "White",
+    "confidence": 0.46733126044273376,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "MSNBC",
+        "title": "The White House\u2019s approach to performative politics takes an ugly turn",
+        "content_preview": "About a month into Donald Trumps second term, the White House used social media to promote a video featuring ICE officials placing immigrants in chains and handcuffs before theyre loaded onto a plane\u2026 [+3115 chars]",
+        "url": "https://www.msnbc.com/rachel-maddow-show/maddowblog/white-houses-approach-performative-politics-takes-ugly-turn-rcna225815",
+        "published_at": "2025-08-19T18:56:06+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump says he's raising $2 billion from Congress to have D.C. \"beautified\"",
+        "content_preview": "Washington \u2014 President Trump on Friday said he plans to raise about $2 billion from Congress to work with a contractor to renovate the streets of Washington, D.C., as his administration's federal ant\u2026 [+1438 chars]",
+        "url": "https://www.cbsnews.com/news/trump-2-billion-congress-dc-renovated/",
+        "published_at": "2025-08-22T15:30:59+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_020",
+    "topic": "Kilmar",
+    "confidence": 0.458385169506073,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Live updates: Trump news, National Guard threats, Kilmar Abrego Garcia deportation | CNN Politics",
+        "content_preview": "We can give you more details on an executive order to be signed by President Donald Trump today. The order is expected to be one that would pressure jurisdictions to eliminate cashless bail, two Whit\u2026 [+1641 chars]",
+        "url": "https://www.cnn.com/politics/live-news/trump-administration-news-08-25-25",
+        "published_at": "2025-08-25T11:48:55+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Judge blocks immediate deportation of Kilmar Abrego Garcia to Uganda",
+        "content_preview": "Copyright \u00a92025 CBS Interactive Inc. All rights reserved.",
+        "url": "https://www.cbsnews.com/video/judge-blocks-immediate-deportation-of-kilmar-abrego-garcia-to-uganda/",
+        "published_at": "2025-08-25T21:32:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_021",
+    "topic": "Gorsuch,",
+    "confidence": 0.4581805169582367,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Gorsuch, Kavanaugh warn lower court judges...",
+        "content_preview": "In Donald Trumps long-running feud with federal judges, the president has found some support in an unlikely place: the nations highest court.\r\nA growing sense of frustration with some lower courts ar\u2026 [+9447 chars]",
+        "url": "https://www.cnn.com/2025/08/25/politics/supreme-court-justices-trump-lower-court",
+        "published_at": "2025-08-25T20:00:03+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Judge tosses Trump lawsuit against Maryland judges over immigration order",
+        "content_preview": "Washington \u2014 A federal judge on Tuesday threw out the Trump administration's challenge to a standing order issued by a U.S. district court in Maryland that bars federal immigration officials from imm\u2026 [+5213 chars]",
+        "url": "https://www.cbsnews.com/news/maryland-judges-trump-administration-lawsuit-deportations/",
+        "published_at": "2025-08-26T15:13:59+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_022",
+    "topic": "Russia-Ukraine",
+    "confidence": 0.4541655480861664,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Live updates: Trump to meet Putin in Alaska to discuss Russia-Ukraine war | CNN Politics",
+        "content_preview": "The US and the Russia landed on Alaska as the site for todays summit after a lengthy behind-the-scenes back-and-forth, according to people familiar with the matter.\r\nThere were few places that would \u2026 [+1261 chars]",
+        "url": "https://www.cnn.com/politics/live-news/trump-putin-meeting-news-08-15-25",
+        "published_at": "2025-08-15T05:03:03+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Al Jazeera English",
+        "title": "Russia-Ukraine war: List of key events, day 1,277",
+        "content_preview": "Here is how things stand on Sunday, August 24:\r\nFighting\r\n<ul><li>Russian forces launched a drone attack on a minibus in Ukraines Dnipropetrovsk region, killing a 59-year-old man and wounding five ot\u2026 [+2419 chars]",
+        "url": "https://www.aljazeera.com/news/2025/8/24/russia-ukraine-war-list-of-key-events-day-1277",
+        "published_at": "2025-08-24T01:57:57+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_023",
+    "topic": "Fact",
+    "confidence": 0.4455391466617584,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Fact check: Trump\u2019s latest fake history about the war in Ukraine | CNN Politics",
+        "content_preview": "See all topics\r\nPresident Donald Trump claimed Monday that he knew why Russian troops werent able to enter Kyiv in the days after they invaded Ukraine in 2022. Russias tanks, Trump said, got destroye\u2026 [+12292 chars]",
+        "url": "https://www.cnn.com/2025/08/15/politics/fact-check-trump-ukraine-war",
+        "published_at": "2025-08-15T14:00:21+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Al Jazeera English",
+        "title": "Russia-Ukraine war: List of key events, day 1,278",
+        "content_preview": "Here is how things stand on Monday, August 25:\r\nFighting\r\n<ul><li>Russian forces shelled Ukraines Donetsk region 23 times in a day, killing one person in Kostiantynivka, Governor Vadym Filashkin said\u2026 [+3316 chars]",
+        "url": "https://www.aljazeera.com/news/2025/8/24/russia-ukraine-war-list-of-key-events-day-1278",
+        "published_at": "2025-08-24T23:13:52+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_024",
+    "topic": "Takeaways",
+    "confidence": 0.44035735726356506,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Takeaways so far from Trump\u2019s meetings with Zelensky and European leaders | CNN Politics",
+        "content_preview": "President Donald Trump held hastily arranged talks Monday with Ukrainian President Volodymyr Zelensky and a host of European leaders a rarity at the White House as he seeks to negotiate an end to Rus\u2026 [+7062 chars]",
+        "url": "https://www.cnn.com/2025/08/18/politics/takeaways-trump-zelensky-european-leader-meetings",
+        "published_at": "2025-08-18T20:17:31+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Al Jazeera English",
+        "title": "South Korea\u2019s Lee set to meet Trump, with trade and security high on agenda",
+        "content_preview": "Seoul, South Korea South Korean President Lee Jae-myung is set to meet United States President Donald Trump for the first time in a high-stakes visit to his countrys closest and most important ally.\r\u2026 [+9507 chars]",
+        "url": "https://www.aljazeera.com/news/2025/8/25/south-koreas-lee-set-to-meet-trump-with-trade-and-security-high-on-agenda",
+        "published_at": "2025-08-25T02:04:39+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_025",
+    "topic": "Trump",
+    "confidence": 0.42659491300582886,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Hegseth fires general whose agency\u2019s intel assessment of damage from Iran strikes angered Trump | CNN Politics",
+        "content_preview": "See all topics\r\nDefense Secretary Pete Hegseth has fired a general whose agencys initial intelligence assessment of damage to Iranian nuclear sites from US strikes angered President Donald Trump, acc\u2026 [+1272 chars]",
+        "url": "https://www.cnn.com/2025/08/22/politics/hegseth-fires-head-of-defense-intelligence-agency",
+        "published_at": "2025-08-22T20:32:02+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump floats changing Defense Department to Department of War",
+        "content_preview": "President Trump on Monday floated returning the Department of Defense to its prior name, the Department of War \u2014 arguing the name it has held since the 1940s is \"too defensive.\"\r\n\"We want to be defen\u2026 [+2426 chars]",
+        "url": "https://www.cbsnews.com/news/trump-defense-department-to-department-of-war/",
+        "published_at": "2025-08-25T22:24:32+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_026",
+    "topic": "Politics",
+    "confidence": 0.42590028047561646,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "US State Department has revoked more than 6,000 student visas, official says | CNN Politics",
+        "content_preview": "The State Department has revoked more than 6,000 student visas this year, a State Department official said Monday, as the Trump administration continues its crackdown on some international students i\u2026 [+3032 chars]",
+        "url": "https://www.cnn.com/2025/08/18/politics/us-state-department-revoked-6000-student-visas",
+        "published_at": "2025-08-18T19:42:54+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "What to know about visas for foreign truckers and the politics of a deadly Florida crash",
+        "content_preview": "Secretary of State Marco Rubio announced this week that the U.S. will pause issuing work visas to some foreign truck drivers, warning darkly that they are endangering American lives and undercutting \u2026 [+4843 chars]",
+        "url": "https://abcnews.go.com/US/wireStory/visas-foreign-truckers-politics-deadly-florida-crash-124905178",
+        "published_at": "2025-08-23T00:38:27+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_027",
+    "topic": "Court",
+    "confidence": 0.41788333654403687,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "The Guardian",
+        "title": "Court tosses Trump lawsuit against Maryland judges over US deportations",
+        "content_preview": "A federal judge on Tuesday dismissed an unprecedented lawsuit filed by the Trump administration earlier in the summer against all 15 judges serving on Maryland\u2019s federal district court \u2013 a case that opposed pausing some deportations from the state. In a 37-page ruling, US district judge Thomas Cullen of Virginia\u2019s western district \u2013 who was nominated and confirmed to his position during Donald Trump\u2019s first presidency \u2013 wrote that \u201cany fair reading of the legal authorities cited by defendants le",
+        "url": "https://www.theguardian.com/us-news/2025/aug/26/trump-lawsuit-maryland-judges-tossed",
+        "published_at": "2025-08-26T18:18:39+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Kilmar Abrego Garcia released from detention",
+        "content_preview": "Kilmar Abrego Garcia was released from Putnam County Jail in Tennessee on Friday and has been reunited with his family while he awaits trial, according to his attorney.\u00a0\r\nIt's the latest development \u2026 [+2416 chars]",
+        "url": "https://www.cbsnews.com/news/kilmar-abrego-garcia-released-detention/",
+        "published_at": "2025-08-22T19:46:44+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_028",
+    "topic": "Trump",
+    "confidence": 0.41615360975265503,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Live updates: The latest on the Trump administration",
+        "content_preview": "The Republican National Committee elected Florida state Sen. Joe Gruters as its new chair today at a committee meeting in Atlanta, Georgia, replacing outgoing chairman Michael Whatley, who is running\u2026 [+1327 chars]",
+        "url": "https://www.cnn.com/politics/live-news/trump-administration-redistricting-08-22-25",
+        "published_at": "2025-08-22T12:17:35+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump says he's going to patrol D.C. with police, National Guard",
+        "content_preview": "Washington \u2014 President Trump said he's going out in Washington, D.C., Thursday night to patrol the city alongside law enforcement and the National Guard.\u00a0\r\nMr. Trump made the announcement as the Metr\u2026 [+2154 chars]",
+        "url": "https://www.cbsnews.com/news/trump-patrol-dc-police-national-guard/",
+        "published_at": "2025-08-21T17:46:33+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_029",
+    "topic": "Mayor",
+    "confidence": 0.41569411754608154,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "The Guardian",
+        "title": "DC mayor says she \u2018greatly appreciates\u2019 Trump\u2019s surge of federal officers but adds there is \u2018break in trust\u2019 with residents \u2013 live",
+        "content_preview": "Donald Trump has ordered the American flag to be flown at half-staff at the White House and across federal buildings until 31 August, following the mass shooting at a Catholic school in Minneapolis which killed two children and injured 17 people. A reminder that my colleagues are bringing you the latest developments from Minneapolis. Grand jurors have rebuffed federal prosecutors by refusing to approve a criminal indictment against a man who allegedly threw a sandwich at a law enforcement agent ",
+        "url": "https://www.theguardian.com/us-news/live/2025/aug/27/donald-trump-tariffs-india-us-politics-latest-updates-news",
+        "published_at": "2025-08-27T19:08:36+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "FEMA staff argue Trump administration's cuts risk undoing progress since Katrina",
+        "content_preview": "A group of current and former Federal Emergency Management Agency officials warned Congress on Monday that the Trump administration's sweeping changes to the disaster relief agency could reverse deca\u2026 [+4472 chars]",
+        "url": "https://www.cbsnews.com/news/fema-staff-argue-trump-administration-cuts-risk-undoing-progress-since-hurricane-katrina/",
+        "published_at": "2025-08-26T02:36:02+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_030",
+    "topic": "Melber",
+    "confidence": 0.41397547721862793,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "MSNBC",
+        "title": "Ari Melber shares new Epstein timeline he says raises 'fresh questions' for Trump admin",
+        "content_preview": "The controversy over Donald Trump and his administrations handling of the Jeffrey Epstein case continues. \r\nOn Tuesdays The Beat, Ari Melber delivered a special report laying out a timeline of Epstei\u2026 [+2224 chars]",
+        "url": "https://www.msnbc.com/top-stories/latest/jeffrey-epstein-investigation-timeline-trump-rcna226134",
+        "published_at": "2025-08-20T19:46:05+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Fomer Musk adviser Katie Miller brings conservative women's voices to new podcast",
+        "content_preview": "Copyright \u00a92025 CBS Interactive Inc. All rights reserved.",
+        "url": "https://www.cbsnews.com/video/fomer-musk-adviser-katie-miller-brings-conservative-womens-voices-to-new-podcast/",
+        "published_at": "2025-08-25T14:55:00+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_031",
+    "topic": "Defamation",
+    "confidence": 0.41308706998825073,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "The Guardian",
+        "title": "Almost a year after the Reynolds v Higgins defamation trial wrapped, the verdict is due",
+        "content_preview": "Almost a year after the five-week defamation trial between Linda Reynolds and her former staffer Brittany Higgins wrapped up, a Western Australian supreme court judge is due to hand down his verdict. The judge will weigh up the five weeks of evidence presented over August and September 2024, to determine whether Higgins defamed Reynolds, formerly a federal WA Liberal senator, in social media posts in 2022 and 2023. Sign up: AU Breaking News email The court heard evidence spanning the five-year p",
+        "url": "https://www.theguardian.com/law/2025/aug/27/linda-reynolds-v-brittany-higgins-defamation-trial-verdict-due-ntwnfb",
+        "published_at": "2025-08-26T15:00:09+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "Al Jazeera English",
+        "title": "Judgement day for former Thai PM Thaksin Shinawatra in royal defamation case",
+        "content_preview": "Bangkok, Thailand A court is poised to decide whether Thailands most consequential and controversial political figure of the past 25 years, Thaksin Shinawatra, insulted the countrys revered monarchy,\u2026 [+10908 chars]",
+        "url": "https://www.aljazeera.com/news/2025/8/21/judgement-day-for-former-thai-pm-thaksin-shinawatra-in-royal-defamation-case",
+        "published_at": "2025-08-21T23:33:47+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_032",
+    "topic": "Alleged",
+    "confidence": 0.411358505487442,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "The Guardian",
+        "title": "Javier Milei embroiled in corruption scandal tying his sister to alleged bribes",
+        "content_preview": "Argentina\u2019s president Javier Milei is facing his administration\u2019s worst alleged corruption scandal \u2013 involving none other than his hugely influential sister, Karina \u2013 less than two months before key legislative elections. For more than a week, news in the country has been dominated by audio recordings in which a former government official is heard discussing the alleged payment of bribes linked to the purchase of medicines for people with disabilities. In the recordings, Diego Spagnuolo, the hea",
+        "url": "https://www.theguardian.com/world/2025/aug/27/javier-milei-sister-argentina-alleged-kickbacks",
+        "published_at": "2025-08-27T13:14:53+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "Argentina investigates alleged kickback scheme entangling President Milei's inner circle",
+        "content_preview": "BUENOS AIRES, Argentina -- Argentine police on Friday raided over a dozen luxury homes and offices including the headquarters of a national agency charged with providing disability benefits, an offic\u2026 [+4557 chars]",
+        "url": "https://abcnews.go.com/International/wireStory/argentina-investigates-alleged-kickback-scheme-entangling-president-mileis-124899680",
+        "published_at": "2025-08-22T21:02:48+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_033",
+    "topic": "Trump'S",
+    "confidence": 0.4105093479156494,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "MSNBC",
+        "title": "Trump's lies about his approval ratings are more pernicious than they seem",
+        "content_preview": "President Donald Trump posted on Truth Social on Sunday night, Except what is written and broadcast in the Fake News, I now have the highest poll numbers Ive ever had, some in the 60s and even 70s. T\u2026 [+3097 chars]",
+        "url": "https://www.msnbc.com/opinion/msnbc-opinion/trump-polls-approval-ratings-lies-truth-social-post-rcna227064",
+        "published_at": "2025-08-26T10:00:00+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Wes Moore says Trump's rhetoric on crime is \"purely performative\"",
+        "content_preview": "Washington \u2014 Maryland Gov. Wes Moore said Sunday that President Trump's rhetoric on crime is \"purely performative\" as the president has offered to send troops to Baltimore amid a push to crack down o\u2026 [+4330 chars]",
+        "url": "https://www.cbsnews.com/news/wes-moore-trump-crime-rhetoric-face-the-nation-08-24-2025/",
+        "published_at": "2025-08-24T18:05:46+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_034",
+    "topic": "Trump",
+    "confidence": 0.4055798053741455,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "The Guardian",
+        "title": "Trump tariffs are reshaping old alliances as the global south plots its own path",
+        "content_preview": "As nations in the global south intensify their discussions on how to respond to Donald Trump\u2019s trade war, the early 20th-century British advocate of tariffs Joseph Chamberlain may hold some lessons. Like Trump, Chamberlain viewed tariffs as a cure-all and believed Imperial Preference \u2013 the system of preferential rates with the British Empire \u2013 could not only advance national self-interest but act as glue binding the British colonial alliance together. Chamberlain\u2019s brother Austen argued that thr",
+        "url": "https://www.theguardian.com/us-news/2025/aug/27/trumps-tariffs-trade-war",
+        "published_at": "2025-08-27T04:05:44+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "World shares sink after Trump escalates feud with the Federal Reserve",
+        "content_preview": "TOKYO -- Shares sank Tuesday in Europe and Asia after President Donald Trump announced he was firing Federal Reserve Governor Lisa Cook. \r\nThe announcement came after trading closed Monday on Wall St\u2026 [+2544 chars]",
+        "url": "https://abcnews.go.com/Business/wireStory/world-shares-sink-after-trump-escalates-feud-federal-124975204",
+        "published_at": "2025-08-26T11:02:11+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_035",
+    "topic": "Trump",
+    "confidence": 0.40226688981056213,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Trump uses FBI and Justice Department to escalate his long-standing feud with Adam Schiff | CNN Politics",
+        "content_preview": "See all topics\r\nIn the first Trump administration, then-Rep. Adam Schiff led the Houses investigations into Donald Trump, first as the top Democrat on the intelligence committees probe into Russian e\u2026 [+10319 chars]",
+        "url": "https://www.cnn.com/2025/08/18/politics/adam-schiff-donald-trump-justice-fbi",
+        "published_at": "2025-08-18T11:00:41+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "CBS News",
+        "title": "Trump says he's fired Federal Reserve board member Lisa Cook",
+        "content_preview": "President Trump said Monday he has fired Lisa Cook from the Federal Reserve's Board of Governors \u2014 a dramatic move after months of public attacks against the central bank.\r\nThe president announced Co\u2026 [+920 chars]",
+        "url": "https://www.cbsnews.com/news/trump-fires-federal-reserve-board-member-lisa-cook/",
+        "published_at": "2025-08-26T00:35:54+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  },
+  {
+    "match_id": "match_036",
+    "topic": "Live",
+    "confidence": 0.4005984663963318,
+    "articles": [
+      {
+        "bias": "left-leaning",
+        "source": "CNN",
+        "title": "Live updates: Zelensky questions Russia\u2019s commitment to peace as White House prepares for visit | CNN Politics",
+        "content_preview": "Welcome back to our coverage of the very latest developments in Russias war in Ukraine.\r\nUkraines main European allies and other members of the coalition of the willing will meet virtually today, as \u2026 [+2375 chars]",
+        "url": "https://www.cnn.com/politics/live-news/trump-putin-zelensky-ukraine-news-08-17-25",
+        "published_at": "2025-08-17T07:40:47+00:00"
+      },
+      {
+        "bias": "centrist",
+        "source": "ABC News",
+        "title": "Ukraine\u2019s independence-era voices say Russia's effort to keep control has lasted decades",
+        "content_preview": "KYIV, Ukraine -- Oleksandr Donii was one of the leaders of student-led protests for sovereignty and political reform in 1990 that preceded Ukraines declaration of independence. He remembers thinking \u2026 [+4691 chars]",
+        "url": "https://abcnews.go.com/International/wireStory/ukraines-independence-era-voices-russias-effort-control-lasted-124928753",
+        "published_at": "2025-08-24T06:30:15+00:00"
+      }
+    ],
+    "validation_questions": [
+      "Do these articles cover the same news story?",
+      "Do they represent different political perspectives?",
+      "How similar are the core facts presented? (1-5 scale)",
+      "How different are the framing/emphasis? (1-5 scale)"
+    ]
+  }
+]

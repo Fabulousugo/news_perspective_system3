@@ -1,0 +1,30 @@
+{
+  "evaluation_date": "2025-08-27T21:16:27.393481",
+  "methodology": "objective_technical_metrics",
+  "technical_metrics": {
+    "processing_throughput": 57.4,
+    "memory_usage_mb": 128.7,
+    "api_success_rate": 0.92,
+    "error_rate": 0.08,
+    "response_time_ms": 45.2
+  },
+  "perspective_metrics": {
+    "cross_source_matches": 9,
+    "unique_sources_used": 6,
+    "bias_categories_found": 3,
+    "average_confidence": 0.68,
+    "match_consistency": 0.75
+  },
+  "claims_supported": [
+    "Real-time processing capability",
+    "Cross-source matching functionality",
+    "Multiple perspective detection",
+    "System reliability metrics"
+  ],
+  "claims_unsupported": [
+    "Quality assessments",
+    "Impact measurements",
+    "Subjective performance ratings",
+    "Human-like understanding"
+  ]
+}

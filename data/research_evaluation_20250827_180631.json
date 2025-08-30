@@ -1,0 +1,344 @@
+{
+  "rq1_similarity_detection": {
+    "threshold_analysis": {
+      "0.6": {
+        "match_count": 6,
+        "avg_confidence": 0.7675928175449371,
+        "topic_diversity": 6,
+        "source_diversity": 0.9
+      },
+      "0.65": {
+        "match_count": 6,
+        "avg_confidence": 0.7675928175449371,
+        "topic_diversity": 6,
+        "source_diversity": 0.9
+      },
+      "0.7000000000000001": {
+        "match_count": 5,
+        "avg_confidence": 0.7878558158874511,
+        "topic_diversity": 5,
+        "source_diversity": 0.9
+      },
+      "0.7500000000000001": {
+        "match_count": 3,
+        "avg_confidence": 0.8356659412384033,
+        "topic_diversity": 3,
+        "source_diversity": 0.6
+      },
+      "0.8000000000000002": {
+        "match_count": 3,
+        "avg_confidence": 0.8356659412384033,
+        "topic_diversity": 3,
+        "source_diversity": 0.6
+      },
+      "0.8500000000000002": {
+        "match_count": 1,
+        "avg_confidence": 0.8884506225585938,
+        "topic_diversity": 1,
+        "source_diversity": 0.2
+      },
+      "0.9000000000000002": {
+        "match_count": 0,
+        "avg_confidence": 0,
+        "topic_diversity": 0,
+        "source_diversity": 0.0
+      }
+    },
+    "topic_coverage": {
+      "topics_covered": 5,
+      "topic_distribution": {
+        "economy": 3,
+        "immigration": 6,
+        "election": 9,
+        "climate": 3,
+        "healthcare": 4
+      },
+      "most_common_topic": "election"
+    },
+    "cross_source_matching": {
+      "total_matches": 1,
+      "unique_source_pairs": 1,
+      "avg_confidence": 0.9244109988212585,
+      "cross_source_effectiveness": 1.0
+    },
+    "temporal_stability": {
+      "early_period_matches": 1,
+      "late_period_matches": 0,
+      "temporal_stability": 1.0
+    },
+    "optimal_threshold": 0.6,
+    "evaluation_summary": {
+      "avg_matches": 3.4285714285714284,
+      "avg_confidence": 0.6975462794303894,
+      "total_thresholds_tested": 7,
+      "topic_coverage": 5
+    }
+  },
+  "rq2_bias_detection": {
+    "bias_classification_results": {
+      "accuracy": 0.5918367346938775,
+      "cv_mean": 0.6354166666666667,
+      "cv_std": 0.06829483478432721,
+      "classification_report": {
+        "0": {
+          "precision": 0.7777777777777778,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.4666666666666667,
+          "support": 21.0
+        },
+        "1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 4.0
+        },
+        "2": {
+          "precision": 0.55,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.6875,
+          "support": 24.0
+        },
+        "accuracy": 0.5918367346938775,
+        "macro avg": {
+          "precision": 0.44259259259259265,
+          "recall": 0.4166666666666667,
+          "f1-score": 0.38472222222222224,
+          "support": 49.0
+        },
+        "weighted avg": {
+          "precision": 0.6027210884353741,
+          "recall": 0.5918367346938775,
+          "f1-score": 0.536734693877551,
+          "support": 49.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          7,
+          0,
+          14
+        ],
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          2,
+          0,
+          22
+        ]
+      ],
+      "training_size": 162,
+      "class_distribution": {
+        "0": 70,
+        "1": 13,
+        "2": 79
+      }
+    },
+    "topic_generalization": {},
+    "temporal_generalization": {
+      "temporal_stability_score": 0.5,
+      "early_period_size": 80,
+      "recent_period_size": 82
+    },
+    "approach_comparison": {
+      "source_based_accuracy": 1.0,
+      "content_based_accuracy": 0.235,
+      "recommended_approach": "source_based"
+    },
+    "evaluation_summary": {
+      "primary_accuracy": 0.5918367346938775,
+      "cross_validation_stable": "True",
+      "training_data_sufficient": true,
+      "generalization_tested": false
+    }
+  },
+  "rq3_system_performance": {
+    "quality_metrics": {
+      "semantic_coherence": 0.9244109988212585,
+      "source_diversity": 0.2,
+      "temporal_relevance": 0.9897933201058201,
+      "topic_consistency": 1.0,
+      "confidence_distribution": {
+        "mean_confidence": 0.9244109988212585,
+        "std_confidence": 0.0,
+        "min_confidence": 0.9244109988212585,
+        "max_confidence": 0.9244109988212585,
+        "high_confidence_matches": 1
+      },
+      "composite_quality_score": 0.7785510797317696
+    },
+    "diversity_analysis": {
+      "unique_perspectives": 2,
+      "bias_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "diversity_score": 0.6666666666666666,
+      "balance_score": 1.0,
+      "total_perspective_instances": 2
+    },
+    "coverage_analysis": {
+      "topic_completeness": 1.0,
+      "topics_covered": 5,
+      "total_possible_topics": 5,
+      "topic_distribution": {
+        "economy": 3,
+        "immigration": 6,
+        "election": 9,
+        "climate": 3,
+        "healthcare": 4
+      },
+      "bias_balance": 0.7870446056095315,
+      "bias_distribution": {
+        "right": 80,
+        "left": 73,
+        "center": 47
+      },
+      "source_diversity": 20,
+      "source_distribution": {
+        "Breitbart": 10,
+        "The Guardian": 21,
+        "CNN": 16,
+        "CBS News": 10,
+        "USA Today": 7,
+        "Fox News": 43,
+        "National Review": 9,
+        "The Hill": 7,
+        "ABC News": 12,
+        "Al Jazeera": 6,
+        "MSNBC": 15,
+        "Washington Times": 12,
+        "The Washington Post": 3,
+        "Salon": 7,
+        "Al Jazeera English": 5,
+        "PBS NewsHour": 6,
+        "The Daily Wire": 5,
+        "Mother Jones": 4,
+        "The Wall Street Journal": 1,
+        "Associated Press": 1
+      },
+      "overall_completeness": 0.8935223028047657
+    },
+    "performance_metrics": {
+      "processing_time_seconds": 5.046557188034058,
+      "throughput_articles_per_second": 39.630978615326505,
+      "match_rate": 0.005,
+      "memory_usage_mb": 8.392333984375e-05,
+      "total_articles_processed": 200,
+      "total_matches_found": 1
+    },
+    "consistency_metrics": {
+      "match_count_consistency": 1,
+      "confidence_consistency": 1,
+      "runs_tested": 3
+    },
+    "overall_score": 0.7226088731992182
+  },
+  "rq4_user_impact_simulation": {
+    "user_profiles": {
+      "liberal_user": {
+        "baseline_diversity": {
+          "total_articles": 37,
+          "unique_sources": 2,
+          "unique_perspectives": 1,
+          "unique_topics": 2,
+          "bias_distribution": {
+            "0": 37
+          }
+        },
+        "enhanced_diversity": {
+          "total_articles": 37,
+          "unique_sources": 2,
+          "unique_perspectives": 1,
+          "unique_topics": 2,
+          "bias_distribution": {
+            "0": 37
+          },
+          "additional_articles": 0
+        },
+        "diversity_improvement": {
+          "unique_sources": 0.0,
+          "unique_perspectives": 0.0,
+          "unique_topics": 0.0,
+          "improvement_score": 0.0
+        },
+        "perspective_exposure_increase": 0
+      },
+      "conservative_user": {
+        "baseline_diversity": {
+          "total_articles": 53,
+          "unique_sources": 2,
+          "unique_perspectives": 1,
+          "unique_topics": 5,
+          "bias_distribution": {
+            "2": 53
+          }
+        },
+        "enhanced_diversity": {
+          "total_articles": 53,
+          "unique_sources": 2,
+          "unique_perspectives": 1,
+          "unique_topics": 5,
+          "bias_distribution": {
+            "2": 53
+          },
+          "additional_articles": 0
+        },
+        "diversity_improvement": {
+          "unique_sources": 0.0,
+          "unique_perspectives": 0.0,
+          "unique_topics": 0.0,
+          "improvement_score": 0.0
+        },
+        "perspective_exposure_increase": 0
+      },
+      "centrist_user": {
+        "baseline_diversity": {
+          "total_articles": 1,
+          "unique_sources": 1,
+          "unique_perspectives": 1,
+          "unique_topics": 0,
+          "bias_distribution": {
+            "1": 1
+          }
+        },
+        "enhanced_diversity": {
+          "total_articles": 1,
+          "unique_sources": 1,
+          "unique_perspectives": 1,
+          "unique_topics": 0,
+          "bias_distribution": {
+            "1": 1
+          },
+          "additional_articles": 0
+        },
+        "diversity_improvement": {
+          "unique_sources": 0.0,
+          "unique_perspectives": 0.0,
+          "unique_topics": 0.0,
+          "improvement_score": 0.0
+        },
+        "perspective_exposure_increase": 0
+      }
+    },
+    "overall_impact": {
+      "avg_diversity_improvement": 0.0,
+      "profiles_tested": 3,
+      "all_profiles_improved": false
+    },
+    "filter_bubble_reduction": {
+      "reduction_score": 0.0,
+      "profiles_with_reduction": 0,
+      "total_profiles": 3
+    }
+  },
+  "evaluation_metadata": {
+    "total_articles": 200,
+    "evaluation_date": "2025-08-27T18:06:31.612854",
+    "evaluation_method": "fully_automated",
+    "save_timestamp": "20250827_180631",
+    "evaluation_type": "comprehensive_research_evaluation"
+  }
+}

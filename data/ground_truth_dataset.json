@@ -1,0 +1,52 @@
+{
+  "creation_date": "2025-08-27T21:12:45.529960",
+  "methodology": "objective_criteria_verifiable_metrics",
+  "evaluation_principles": [
+    "Use identical story pairs with known perspective differences",
+    "Focus on verifiable technical metrics, not subjective quality",
+    "Measure what can be objectively measured",
+    "Avoid subjective human judgment entirely"
+  ],
+  "test_cases": [
+    {
+      "test_id": "tc_001",
+      "description": "Same press release, different editorial framing",
+      "left_article": {
+        "source": "verified_left_source",
+        "title_template": "Policy Announcement: {topic} - Progressive Benefits",
+        "content_template": "The administration announced {policy} today, highlighting benefits for {beneficiaries}."
+      },
+      "right_article": {
+        "source": "verified_right_source",
+        "title_template": "Policy Analysis: {topic} - Economic Impacts",
+        "content_template": "The government revealed {policy} today, raising questions about {economic_concerns}."
+      },
+      "expected_outcome": {
+        "should_match": true,
+        "perspective_difference": true,
+        "core_facts_same": true
+      }
+    }
+  ],
+  "evaluation_metrics": {
+    "technical_metrics": [
+      "precision_at_k",
+      "recall_at_k",
+      "f1_score",
+      "processing_throughput",
+      "match_consistency"
+    ],
+    "banned_metrics": [
+      "subjective_quality_score",
+      "human_like_assessment",
+      "unvalidated_impact_claims"
+    ]
+  },
+  "validation_method": "automated_cross_verification",
+  "success_criteria": [
+    "F1 score > 0.6 on verified test cases",
+    "False positive rate < 0.2",
+    "Processing speed > 30 articles/second",
+    "Perspective detection accuracy > 0.7 on source verification"
+  ]
+}

@@ -13,6 +13,12 @@ import logging
 from datetime import datetime, timedelta
 import time
 import json
+import numpy as np
+from collections import Counter
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
@@ -163,6 +169,7 @@ async def search_articles(request: SearchRequest):
             query=request.query,
             days_back=request.days
         )
+        
         
         # Flatten articles
         all_articles = []
@@ -318,3 +325,31 @@ async def startup_event():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
+
+
+def calculate_diversity_index(articles: List[Article]) -> float:
+    """
+    Calculate the Gini-Simpson Diversity Index for a list of articles.
+    - A value of 0 means no diversity (all articles same bias).
+    - A value close to 1 means high diversity (articles evenly split across biases).
+    """
+    if not articles:
+        return 0.0
+
+    # Count articles per bias label
+    # Assuming bias_label: 0=left, 1=center, 2=right, 3=libertarian
+    bias_counts = Counter(article.bias_label for article in articles if article.bias_label is not None)
+    
+    total_articles = sum(bias_counts.values())
+    
+    if total_articles <= 1:
+        return 0.0
+    
+    # Calculate Gini-Simpson Index: 1 - Σ(pi²)
+    # where pi is the proportion of articles in bias group i
+    diversity_index = 1.0
+    for count in bias_counts.values():
+        p_i = count / total_articles
+        diversity_index -= (p_i * p_i)
+    
+    return diversity_index
