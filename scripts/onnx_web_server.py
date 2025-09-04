@@ -254,7 +254,7 @@ async def find_perspectives(request: PerspectiveRequest):
                     matches.append({
                         'story_id': f"story_{hash(b.article.title) % 1000000}",
                         'topic': b.topic_cluster,
-                        'confidence': 0.8,  # Default confidence
+                        'confidence': 0.65,  # Default confidence
                         'perspectives': {}
                     })
             perf_stats = {}

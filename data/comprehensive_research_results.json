@@ -1,0 +1,101 @@
+{
+  "analysis_timestamp": "2025-09-04T09:30:05.493173+00:00",
+  "dataset_summary": {
+    "total_articles": 190,
+    "sources_count": 13,
+    "perspective_matches": 10,
+    "date_range": {
+      "start": "2025-08-28T00:28:55+00:00",
+      "end": "2025-09-04T09:18:46+00:00"
+    }
+  },
+  "research_question_answers": {
+    "automated_bias_identification": {
+      "feasibility": "Demonstrated",
+      "accuracy_approach": "Source-based classification with ML validation",
+      "scale": "190 articles processed",
+      "bias_categories": 3
+    },
+    "perspective_surfacing": {
+      "effectiveness": "Moderate",
+      "matches_found": 10,
+      "cross_bias_coverage": 2,
+      "average_confidence": 0.7142199099063873
+    },
+    "algorithm_performance": {
+      "processing_speed": "Optimized with quantization and ONNX",
+      "scalability": "Demonstrated with 40+ sources",
+      "bias_detection_approach": "Multi-level (source-based + ML optional)",
+      "similarity_matching": "Semantic embedding based"
+    }
+  },
+  "user_impact_analysis": {},
+  "trend_analysis": {
+    "date_range": {
+      "start": "2025-09-02",
+      "end": "2025-09-04"
+    },
+    "total_days": 3,
+    "total_articles": 250,
+    "daily_averages": {
+      "articles_per_day": 83.33333333333333,
+      "perspective_matches_per_day": 0.0,
+      "avg_match_confidence": 0.0
+    },
+    "bias_distribution_over_time": {
+      "left_trend": [
+        21,
+        95,
+        19
+      ],
+      "center_trend": [
+        3,
+        41,
+        1
+      ],
+      "right_trend": [
+        3,
+        67,
+        0
+      ],
+      "dates": [
+        "2025-09-02",
+        "2025-09-03",
+        "2025-09-04"
+      ]
+    },
+    "perspective_matching_trend": {
+      "matches_per_day": [
+        0,
+        0,
+        0
+      ],
+      "confidence_trend": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dates": [
+        "2025-09-02",
+        "2025-09-03",
+        "2025-09-04"
+      ]
+    },
+    "bias_balance": {
+      "average_imbalance": 0.6139263803680981,
+      "most_balanced_day": "2025-09-03",
+      "most_imbalanced_day": "2025-09-04"
+    }
+  },
+  "visualizations_generated": {
+    "bias_distribution": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\visualizations\\bias_distribution.html",
+    "temporal_analysis": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\visualizations\\temporal_bias_daily.html",
+    "source_analysis": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\visualizations\\source_bias_analysis.html",
+    "topic_heatmap": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\visualizations\\topic_sentiment_heatmap.html",
+    "comprehensive_dashboard": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\visualizations\\comprehensive_dashboard.html"
+  },
+  "reports_generated": {
+    "bias_analysis": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\visualizations\\bias_analysis_report.md",
+    "longitudinal_analysis": "C:\\Users\\FABULOUS UGO\\Desktop\\news_perspective_system3\\scripts\\..\\data\\longitudinal_report.md"
+  }
+}

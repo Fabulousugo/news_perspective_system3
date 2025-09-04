@@ -446,13 +446,13 @@ if __name__ == "__main__":
     collector = EnhancedNewsCollector()
     
     # Test source availability
-    print("🧪 Testing source availability...")
+    print(" Testing source availability...")
     availability = collector.test_source_availability()
-    print(f"📊 API sources available: {len(availability['api_sources'])}")
-    print(f"📊 RSS sources tested: {availability['summary']['rss_tested']}")
+    print(f"API sources available: {len(availability['api_sources'])}")
+    print(f"RSS sources tested: {availability['summary']['rss_tested']}")
     
     # Get available sources
-    print("\n📋 Available sources (comprehensive strategy):")
+    print("\n Available sources (comprehensive strategy):")
     sources = collector.get_available_sources("comprehensive")
     for category, source_list in sources['sources_by_category'].items():
         if source_list:
